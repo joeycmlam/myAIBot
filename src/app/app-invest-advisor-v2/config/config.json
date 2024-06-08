@@ -1,20 +1,11 @@
 {
-    "env_location": "/Users/joeylam/repo/njs/njstool/env/.env.local",
+    "env_location": "/Users/joeylam/repo/py/myAIbot/env/.env.local",
     "URL_LIST": [
         "https://www.morningstar.com/stocks/10-best-companies-invest-now",
         "https://contrarianoutlook.com",
         "https://www.manulifeim.com.hk/en/funds/fund-prices.html",
         "https://magicianyang.blogspot.com",
         "https://www.investing.com"
-    ],
-    "Api": [
-        {
-            "systemid": "xxxxx",
-            "url": "https://xxxxx.com"
-        },
-        {
-            "systemid"
-        }
     ],
     "model": "gpt-3.5-turbo"
 

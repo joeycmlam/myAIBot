@@ -1,6 +1,6 @@
 pip install requests beautifulsoup4 openai
 
-pip install python-dotenv
+pip3 install python-dotenv
 
 pip3 install selenium
 
