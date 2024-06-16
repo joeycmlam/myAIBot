@@ -6,6 +6,25 @@ class AIAdvisor:
         self.openai_api_key = key
         self.model = model
         self.client = OpenAI(api_key=self.openai_api_key)
+        self.response = []
+
+    def chunk_text(self, text, max_tokens=1500):
+        words = text.split()
+        chunks = []
+        current_chunk = []
+
+        for word in words:
+            if len(current_chunk) + len(word) <= max_tokens:
+                current_chunk.append(word)
+            else:
+                chunks.append(" ".join(current_chunk))
+                current_chunk = [word]
+
+        if current_chunk:
+            chunks.append(" ".join(current_chunk))
+
+        return chunks
+
 
     def get_answer_from_chatgpt(self, question, context):
         response = self.client.chat.completions.create(
@@ -17,3 +36,23 @@ class AIAdvisor:
             ]
         )
         return response.choices[0].message.content
+
+    def get_advice(self, question):
+        context_chunks = self.chunk_text(self.data)
+        advices = [self.get_answer_from_chatgpt(question, chunk) for chunk in context_chunks]
+        advice = "\n".join(advices)
+
+        # Save the question and advice to self.response for finetuning
+        self.response.append({
+            'question': question,
+            'advice': advice
+        })
+
+        return advice
+
+
+
+    def put_finetuning(self):
+        with open('fine_tune_data.jsonl', 'w') as f:
+            for entry in self.response:
+                f.write(json.dumps(entry) + '\n')

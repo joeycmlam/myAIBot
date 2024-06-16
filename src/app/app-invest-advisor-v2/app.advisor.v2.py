@@ -39,8 +39,9 @@ class AppAdvisor:
         while True:
             question = input("What is your question? (Type 'bye' to exit) ")
             if question.lower() == 'bye':
+                # self.ai_advisor.put_finetuning()
                 break
-            answer = self.ai_advisor.get_answer_from_chatgpt(question, self.all_contents)
+            answer = self.ai_advisor.get_advice(question)
             print(f"Answer: {answer}")
 
 if __name__ == "__main__":

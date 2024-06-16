@@ -2,11 +2,12 @@ import os
 import time
 import pickle
 from sourceData import SourceData
+import datetime
 
 class URLContentManager:
     def __init__(self, urls):
         self.urls = urls
-        self.filename = 'data/url_contents.pkl'
+        self.filename = f'data/url_contents_{datetime.date.today()}.pkl'
         self.url_contents = {}
         self.source_data = SourceData()
 
