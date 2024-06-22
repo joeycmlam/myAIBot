@@ -1,13 +1,14 @@
 {
     "env_location": "/Users/joeylam/repo/py/myAIbot/env/.env.local",
     "URL_LIST": [
+        "https://www.manulifeim.com.hk/en/funds/fund-details.fid-MLAN3H.html#documents",
         "https://www.morningstar.com/stocks/10-best-companies-invest-now",
         "https://contrarianoutlook.com",
         "https://www.manulifeim.com.hk/en/funds/fund-prices.html",
         "https://magicianyang.blogspot.com",
-        "https://www.investing.com",
-        "https://www.investopedia.com/ask/answers/021215/what-good-debt-ratio-and-what-bad-debt-ratio.asp#:~:text=In%20general%2C%20many%20investors%20look,more%20difficult%20to%20borrow%20money."
+        "https://www.investopedia.com/ask/answers/021215/what-good-debt-ratio-and-what-bad-debt-ratio.asp#:~:text=In%20general%2C%20many%20investors%20look,more%20difficult%20to%20borrow%20money"
     ],
-    "model": "gpt-3.5-turbo"
+    "model": "gpt-3.5-turbo-0125",
+    "refresh": true
 
 }

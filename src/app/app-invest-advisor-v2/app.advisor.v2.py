@@ -25,6 +25,7 @@ class AppAdvisor:
         # Now you can access the environment variables using os.environ.get()
         self.openai_api_key = os.environ.get('OPENAI_API_KEY')
 
+        self.data_refresh = self.data['refresh']
         # Create a URLContentManager and load or fetch content
         self.url_content_manager = URLContentManager(urls)
         self.url_content_manager.load_or_fetch_content()

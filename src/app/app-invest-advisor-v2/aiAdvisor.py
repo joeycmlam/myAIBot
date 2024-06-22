@@ -8,7 +8,7 @@ class AIAdvisor:
         self.client = OpenAI(api_key=self.openai_api_key)
         self.response = []
 
-    def chunk_text(self, text, max_tokens=1500):
+    def chunk_text(self, text, max_tokens=15000):
         words = text.split()
         chunks = []
         current_chunk = []
