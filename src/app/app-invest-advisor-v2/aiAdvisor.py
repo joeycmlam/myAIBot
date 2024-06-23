@@ -53,6 +53,14 @@ class AIAdvisor:
 
 
     def put_finetuning(self):
-        with open('fine_tune_data.jsonl', 'w') as f:
-            for entry in self.response:
-                f.write(json.dumps(entry) + '\n')
+        response = openai.File.create(
+            file=open("training_data.jsonl"),
+            purpose='fine-tune'
+        )
+        file_id = response['id']
+
+        response = openai.FineTune.create(
+            training_file=file_id,
+            model=self.model
+        )
+        self.fine_tune_id = response['id']

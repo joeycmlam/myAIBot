@@ -36,6 +36,10 @@ class AppAdvisor:
         # Create an instance of AIAdvisor
         self.ai_advisor = AIAdvisor(self.all_contents, self.openai_api_key, self.model)
 
+        # self.ai_advisor.put_finetuning()
+
+
+
     def run(self):
         while True:
             question = input("What is your question? (Type 'bye' to exit) ")
