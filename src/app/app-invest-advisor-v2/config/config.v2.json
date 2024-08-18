@@ -2,13 +2,11 @@
     "env_location": "/Users/joeylam/repo/py/myAIbot/env/.env.local",
     "URL_LIST": [
         "https://contrarianoutlook.com/members/page/Contrarian+Income+Report+Portfolio",
+        "https://www.manulifeim.com.hk/en/funds/fund-details.fid-MLAN3H.html#documents",
         "https://www.morningstar.com/stocks/10-best-companies-invest-now",
-        "https://contrarianoutlook.com"
-    ],
-    "FILE_LIST": [
-        "/Users/joeylam/repo/py/myAIbot/data/Contrarian+Income+Report+Portfolio.html",
-        "/Users/joeylam/repo/py/myAIbot/data/10-best-companies-invest-now.html",
-        "/Users/joeylam/repo/py/myAIbot/data/contrarianoutlook.html"
+        "https://contrarianoutlook.com",
+        "https://www.manulifeim.com.hk/en/funds/fund-prices.html",
+        "https://magicianyang.blogspot.com",
     ],
     "model": "gpt-3.5-turbo-0125",
     "refresh": true
