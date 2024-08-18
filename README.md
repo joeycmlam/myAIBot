@@ -17,4 +17,4 @@ pip3 install python-dotenv
 
 pip3 install selenium
 
-pip3 install webdriver_manager
+pip3 install webdriver_manager~~~~
